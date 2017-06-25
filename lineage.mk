@@ -21,7 +21,7 @@ $(call inherit-product, device/samsung/ms013g/full_ms013g.mk)
 # Release name
 PRODUCT_RELEASE_NAME := SM-G7102
 PRODUCT_DEVICE := ms013g
-PRODUCT_NAME := cm_ms013g
+PRODUCT_NAME := lineage_ms013g
 		
 # Product property		
 PRODUCT_BUILD_PROP_OVERRIDES += \
