@@ -31,10 +31,13 @@
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
+#include <android-base/logging.h>
+#include <android-base/properties.h>
 #include "vendor_init.h"
 #include "property_service.h"
-#include "log.h"
-#include "util.h"
+
+using android::base::GetProperty;
+using android::init::property_set;
 
 void property_override(char const prop[], char const value[])
 {
@@ -50,7 +53,7 @@ void property_override(char const prop[], char const value[])
 void vendor_load_properties()
 {
 
-    std::string bootloader = property_get("ro.bootloader");
+    std::string bootloader = GetProperty("ro.bootloader", "");
 
     if (bootloader.find("G7105") == 0) {
         /* ms01lte */
@@ -73,6 +76,6 @@ void vendor_load_properties()
         property_override("telephony.lteOnCdmaDevice", "0");
     }
 
-    std::string device = property_get("ro.product.device");
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
+    std::string device = GetProperty("ro.product.device", "");
+    LOG(INFO) << ("Found bootloader id " <<  bootloader.c_str() << ", setting build properties for " << device.c_str() << " device\n";
 }
