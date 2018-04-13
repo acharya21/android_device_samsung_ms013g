@@ -56,4 +56,4 @@ PRODUCT_PACKAGES += telephony-ext
 PRODUCT_BOOT_JARS += telephony-ext
  
 # Inherit from qcom-common
-$(call inherit-product, device/samsung/ms01-common/ms01.mk)
+$(call inherit-product, device/samsung/msm8226-common/msm8226.mk)

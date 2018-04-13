@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from ms01-common
--include device/samsung/ms01-common/BoardConfigCommon.mk
+# Inherit from msm8226-common
+-include device/samsung/msm8226-common/BoardConfigCommon.mk
 
 TARGET_OTA_ASSERT_DEVICE := ms013g
 
