@@ -15,13 +15,21 @@
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Inherit device configuration
-$(call inherit-product, device/samsung/ms013g/full_ms013g.mk)
+$(call inherit-product, device/samsung/ms013g/ms013g.mk)
 
 # Release name
 PRODUCT_RELEASE_NAME := SM-G7102
+
+## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ms013g
 PRODUCT_NAME := lineage_ms013g
+PRODUCT_BRAND := samsung
+PRODUCT_MODEL := SM-G7102
+PRODUCT_MANUFACTURER := samsung
 		
 # Product property		
 PRODUCT_BUILD_PROP_OVERRIDES += \
