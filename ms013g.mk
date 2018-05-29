@@ -13,7 +13,9 @@
 # limitations under the License.
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Proprietary files
 $(call inherit-product, vendor/samsung/ms013g/ms013g-vendor.mk)
