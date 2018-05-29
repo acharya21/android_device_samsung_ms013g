@@ -314,6 +314,9 @@ vendor/lib/libmmwfdsrcinterface.so
 # Sensors
 vendor/lib/hw/sensors.msm8226.so
 
+# STLport
+vendor/lib/libstlport.so
+
 # Thermal
 bin/thermal-engine
 vendor/lib/libthermalclient.so
