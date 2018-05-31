@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES += \
 
 # Default.prop overrides to get adb working at boot
 ifneq ($(TARGET_BUILD_VARIANT),user) 
-ADDITIONAL_DEFAULT_PROPERTIES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     ro.adb.secure=0
 endif
