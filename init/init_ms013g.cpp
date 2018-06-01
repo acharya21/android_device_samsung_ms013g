@@ -77,5 +77,5 @@ void vendor_load_properties()
     }
 
     std::string device = GetProperty("ro.product.device", "");
-    LOG(INFO) << ("Found bootloader id " <<  bootloader.c_str() << ", setting build properties for " << device.c_str() << " device\n";
+    LOG(INFO) << "Found bootloader id " <<  bootloader.c_str() << ", setting build properties for " << device.c_str() << " device\n";
 }
